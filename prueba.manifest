@@ -1,0 +1,15 @@
+{
+  "name": "My App",
+  "description": "My elevator pitch goes here",
+  "launch_path": "/index.html",
+  "icons": {
+    "512": "/img/icon-512.png",
+    "128": "/img/icon-128.png"
+  },
+  "developer": {
+    "name": "Alejandro Fernández Barroso",
+    "url": "http://afernandezb92.github.io/X-Nav-Practica-Hoteles/"
+  },
+  "default_locale": "en",
+  "chrome": { "navigation": true }
+}
