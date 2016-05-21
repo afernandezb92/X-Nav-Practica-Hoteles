@@ -7,8 +7,7 @@ Nombre de su cuenta en el laboratorio del alumno: abarroso
 
 Nombre de usuario en GitHub: afernandezb92
 
-Resumen de las peculiaridades que se quieran mencionar sobre lo im-
-plementado en la parte obligatoria: No se permite realizar ninguna funcionalidad, hasta que no se carguen los hoteles.
+Resumen de las peculiaridades que se quieran mencionar sobre lo implementado en la parte obligatoria: No se permite realizar ninguna funcionalidad, hasta que no se carguen los hoteles.
 Tampoco se permite introducir un nombre de usuario de Google + incorrecto.
 
 URL del video demostración de la funcionalidad básica: https://vimeo.com/167540943
