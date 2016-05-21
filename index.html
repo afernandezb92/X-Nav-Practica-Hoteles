@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="us">
+<head>
+	<meta charset="utf-8">
+	<title>Alojamientos en Madrid</title>
+	<link rel="stylesheet" type="text/css" href="/css/jquery-ui.css" />
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+	<!-- Bootstrap -->
+    <link href="/css/bootstrap.css" rel="stylesheet">
+	<link href="/css/prettify.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/css/style.css" />
+	<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+	<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	<script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
+	<script src="/js/script.js"></script>
+	<script src="/js/jqueryuy.js"></script>
+	<script src="/js/bootstrap.js"></script>
+	<script src="/js/prettify.js"></script>
+	<script src="/js/github-API.js"></script>
+	
+</head>
+<body>
+	<p id="logo" align="center"> 
+		<img id="logoimage" border="2" src="/image/logo.png" width=15%>
+	</p>
+	<div id="contenido">
+		<div id="hotel">
+				<div class="container">
+				<div class="span12">
+					<section id="wizard">
+						<div id="rootwizard" class="tabbable tabs-left">
+							<ul class="nav nav-tabs">
+							  	<li class="active"><a href="#tab1" data-toggle="tab">Localización</a></li>
+								<li><a href="#tab2" data-toggle="tab">Gestión de alojados</a></li>
+								<li><a href="#tab3" data-toggle="tab">Gestión de colecciones</a></li>
+							</ul>
+							<div class="tab-content">
+								<div id="save-form" style='display:none;'>
+									<form>
+										<h3>Token de github:  &nbsp <input id="token" type="text"></h3>
+										<h3>Nombre de repositorio:  &nbsp <input id="repo" type="text"></h3>
+										<h3>Nombre de fichero:  &nbsp <input id="fich" type="text"></h3>
+									</form>
+									<a href="#" class="myButton" onclick='save()'>Guardar</a>
+							    </div>
+							    <div id="load-form" style='display:none;'>
+									<form>
+										<h3>Token de github:  &nbsp <input id="token-load" type="text"></h3>
+										<h3>Nombre de repositorio:  &nbsp <input id="repo-load" type="text"></h3>
+										<h3>Nombre de fichero:  &nbsp <input id="fich-load" type="text"></h3>
+									</form>
+									<a href="#" class="myButton" onclick='load()'>Cargar</a>
+							    </div>
+							    <div class="tab-pane active" id="tab1">
+							      <div id="mapid"></div>
+							      <div id="info"></div>
+									<div id ="carousel">
+										 <div id="myCarousel" class="carousel slide">
+											 <div class="carousel-inner" id="items">
+										     </div>	
+										      <ol class="carousel-indicators" id="indicators">
+											 </ol>	 
+										 </div>	 
+									 </div>
+							    </div>  
+							    <div class="tab-pane" id="tab2">
+									<div id="anadir-alojado" style='display:none;'>
+										<form>
+											<h3>Introduce el id de Google + para añadir usuario:  &nbsp <input id="usario-alojado" type="text"></h3>
+										</form>
+										<a href="#" class="myButton" onclick='anadir()'>Añadir</a>
+									</div>
+									<div id="info-alojados"></div>
+									<div id="alojados" style='display:none;'>
+										<h3>Alojados:</h3>
+										<div id="colecciones-alojados">
+										</div>
+										<a href="#" id="nuevo-alojado" class="myButton">Añadir alojado</a>
+									</div>
+							    </div>
+							    <div class="tab-pane" id="tab3">
+									<div id="colecciones">
+										<div id="colecciones-principal" style='display:none;'>
+											<a href="#" id="nueva-coleccion" class="myButton">Nueva colección</a>
+											<label for="collection">Seleciona una colección</label>
+											<select name="collection" id="collection">
+											   <option id="vistos" selected="selected" onclick='cambio("select-vistos")'>vistos</option>
+											</select>
+											<div id="colecciones-contenido">
+												<select id="select-vistos" style='display:block;' multiple class="form-control">
+												</select>
+											</div>	
+										</div>
+										<div id="colecciones-crear" style='display:none;'>
+											<form>
+												<h3>Nombre de la colección:  &nbsp <input id="nombre-coleccion" type="text"></h3>
+											</form>
+											<a href="#" class="myButton" onclick='publicar()'>Crear</a>
+							            </div>
+									</div>
+							    </div>
+							</div>	
+						</div>
+					</section>
+					</div>
+				</div>
+			</div>
+		<div id="hoteles">
+			<a href="#" id="load-hotel" class="myButton">Cargar hoteles</a>
+			<div id="select" style='display:none;'>
+				<select id="select-hotel" multiple class="form-control">
+				</select>
+			</div>
+			<div id="save-load" style='display:none;'>
+				<a href="#" class="myButton" id="save">Guardar datos</a>
+				<a href="#" class="myButton" id="load">Cargar datos</a>
+			</div>
+			<div id="colecciones-seleccionadas" style='display:none;'>
+				<label for="colecion-selecionada" id="nombre-selecionado" >vistos: </label>
+				<select id="colecion-contenido-principal" style='display:block;' multiple class="form-control">
+			</div>	
+			</select>
+		</div>	
+	</div> 
+</body>	
